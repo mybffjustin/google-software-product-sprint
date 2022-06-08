@@ -27,6 +27,15 @@ function addRandomAbout() {
     aboutContainer.innerText = about;
 }
 
+/** Fetches the string from the server and adds it to the page. */
+async function showHelloResp() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+
+    const helloContainer = document.getElementById('hello-container');
+    helloContainer.innerText = textFromResponse;
+}
+
 /**
  * Scroll to the top of the document
  */
