@@ -416,6 +416,19 @@ HEADER SECTION
                     </div>
                 </div>
             </div>
+            
+            <form action = "/form-handler" method = "POST">
+                <input type = "text" name = "name-input"
+                       placeholder = "Your Name"/>
+                <br/><br/>
+                <input type = "text" name = "email-input"
+                       placeholder = "Your Email"/>
+                <br/><br/>
+                <textarea name = "comment-input"
+                          placeholder = "Your Comment"></textarea>
+                <br/><br/>
+                <input type = "submit"/>
+            </form>
         
         </div>
     </section>
@@ -1159,33 +1172,33 @@ HEADER SECTION
             </div>
         </div>
     </section>
-        <!-- ==========================
-        SPS SECTION
-        =========================== -->
-        <section class = "intro text-center section-padding color-bg" id =
-                "sps">
-            <div class = "container">
-                <!-- WELCOME TEXT -->
-                <div class = "row">
-                    <div class = "col-md-8 col-md-offset-2 wp1">
-                        <h1 class = "arrow"><span>SPS Exercises</span></h1>
-                        <!-- Headline -->
-                        <!-- SPS exercise text -->
-                        <p>I am </p>
-                        <button onclick = "addRandomAbout()">Justin Hoang</button>
-                        <div id = "about-container"></div>
-                    </div>
+    <!-- ==========================
+    SPS SECTION
+    =========================== -->
+    <section class = "intro text-center section-padding color-bg" id =
+            "sps">
+        <div class = "container">
+            <!-- WELCOME TEXT -->
+            <div class = "row">
+                <div class = "col-md-8 col-md-offset-2 wp1">
+                    <h1 class = "arrow"><span>SPS Exercises</span></h1>
+                    <!-- Headline -->
+                    <!-- SPS exercise text -->
+                    <p>I am </p>
+                    <button onclick = "addRandomAbout()">Justin Hoang</button>
+                    <div id = "about-container"></div>
                 </div>
-                <h1>Hello Friend Example</h1>
-                <p>Click this button to see the server's response.</p>
-                <button onclick="showHelloResp();">
-                    Get string
-                </button>
-                <p id="hello-container"></p>
-                <p>Click <a href="/hello">here</a> to see the server response
-                   directly.</p>
             </div>
-        </section>
+            <h1>Hello Friend Example</h1>
+            <p>Click this button to see the server's response.</p>
+            <button onclick = "showHelloResp();">
+                Get string
+            </button>
+            <p id = "hello-container"></p>
+            <p>Click <a href = "/hello">here</a> to see the server response
+               directly.</p>
+        </div>
+    </section>
     <!-- ==========================
     CUSTOM SPACER
     =========================== -->
