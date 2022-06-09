@@ -1,7 +1,136 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 /*========================================================================*/
+/*************************
+  Skip Link
+*************************/
+.skipLink {
+	position: absolute;
+	left: -9999px;
+	padding .5em .25px;
+}
 
+.skipLink:focus,
+.skipLink:active {
+	left: 0;
+}
 
+.s1 {
+	background-color: #E04343;
+	border-bottom: 1px solid #8c9398;
+	overflow: visible;
+	width: 100%;
+}
+.post-wrapper {
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 320px);
+	gap: 20px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+.main-container {
+	margin: auto;
+	padding: inherit;
+}
+.post {
+	background-color: #fff;
+	border: 2px solid #8c9398;
+	-webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+}
+.thumbnail {
+	display: block;
+	width: 100%;
+	height: 180px;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.post-preview {
+	background-color: #fff;
+	padding: 15px;
+}
+
+.post-title {
+	color: black;
+	margin: 0;
+}
+
+.post-intro {
+	color: #E04343;
+	font-size: 14px;
+}
+
+#up {
+	display: inline-block;
+	background-color: #FF9800;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s,
+	opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+}
+#up::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+}
+#up:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+#up:active {
+	background-color: #555;
+}
+#up.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+table.redTable {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border: 2px solid #A40808;
+	background-color: #EEE7DB;
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+table.redTable td, table.redTable th {
+	border: 1px solid #AAAAAA;
+	padding: 3px 2px;
+}
+table.redTable tbody td {
+	font-size: 13px;
+}
+table.redTable tr:nth-child(even) {
+	background: #F5C8BF;
+}
+table.redTable tfoot td {
+	font-size: 13px;
+}
+table.redTable tfoot .links {
+	text-align: right;
+}
+table.redTable tfoot .links a{
+	display: inline-block;
+	background: #FFFFFF;
+	color: #A40808;
+	padding: 2px 8px;
+	border-radius: 5px;
+}
 /* ==========================================================================
 	Global Styles
 ========================================================================== */
