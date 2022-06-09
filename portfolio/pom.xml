@@ -17,6 +17,8 @@
         <jstl.version>1.2</jstl.version>
         <gson.version>2.9.0</gson.version>
         <objectify.version>6.0.7</objectify.version>
+        <javax.ws.rs.version>2.1.1</javax.ws.rs.version>
+        <log4j2.version>2.17.1</log4j2.version>
 
         <!-- Project-specific properties -->
         <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
@@ -71,6 +73,36 @@
             <groupId>com.googlecode.objectify</groupId>
             <artifactId>objectify</artifactId>
             <version>${objectify.version}</version>
+        </dependency>
+
+        <!--Javax-ws-rs-->
+        <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${javax.ws.rs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--LOG4J2-->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j2.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
