@@ -24,9 +24,13 @@ import javax.servlet.http.HttpServletResponse;
 public class FormHandlerServlet extends HttpServlet {
 
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String name = request.getParameter("name-input");
-        String email = request.getParameter("email-input");
+    public void doPost(HttpServletRequest request,
+                       HttpServletResponse response) throws
+                                                                                 IOException {
+        log("Is this logging? (FormHandlerServlet.java) (better log version)");
+
+        String name    = request.getParameter("name-input");
+        String email   = request.getParameter("email-input");
         String comment = request.getParameter("comment-input");
 
         // // Print the input so you can see it in the server logs.

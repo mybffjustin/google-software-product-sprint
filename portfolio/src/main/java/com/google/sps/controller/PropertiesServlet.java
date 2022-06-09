@@ -59,7 +59,9 @@ public class PropertiesServlet extends HttpServlet implements PropLoader {
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
-        log("Is this logging? <= is from the log (PropertiesServlet.java)");
+        System.out.println("Is this logging? (PropertiesServlet.java) (bad " +
+                           "log version)");
+        log("Is this logging? (PropertiesServlet.java) (better log version)");
         out.print("<HTML>");
         out.print("<HEAD><TITLE>Justin Hoang | Properties " +
                   "Servlet</TITLE></HEAD>");
@@ -115,7 +117,6 @@ public class PropertiesServlet extends HttpServlet implements PropLoader {
         out.print("</tr>");
         out.print("</tbody>");
         out.print("</table>");
-
         out.print("</BODY>");
         out.print("</HTML>");
         out.close();

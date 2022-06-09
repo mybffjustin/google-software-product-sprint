@@ -52,7 +52,9 @@ public class PracticeServlet extends HttpServlet {
         hitCounter++;
 
         PrintWriter out = response.getWriter();
-        log("Is this logging? <= is from the log (PracticeServlet.java)");
+        System.out.println("Is this logging? (PracticeServlet.java) (bad " +
+                           "log version)");
+        log("Is this logging? (PracticeServlet.java) (better log version)");
         out.print("<HTML>");
         out.print("<HEAD><TITLE>Servlet Practice</TITLE></HEAD>");
         out.print("<BODY>");
