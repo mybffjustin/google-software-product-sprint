@@ -13,6 +13,25 @@
 // limitations under the License.
 
 /**
+ * Generates a URL for a random image in the images directory and adds an img
+ * element with that URL to the page.
+ */
+function randomizeImage() {
+    // The img/stanley directory contains 13 images, so generate a random index between
+    // 1 and 13.
+    const imageIndex = Math.floor(Math.random() * 13) + 1;
+    const imgUrl = 'img/stanley/stanley-' + imageIndex + '.jpg';
+
+    const imgElement = document.createElement('img');
+    imgElement.src = imgUrl;
+
+    const imageContainer = document.getElementById('random-image-container');
+    // Remove the previous image.
+    imageContainer.innerHTML = '';
+    imageContainer.appendChild(imgElement);
+}
+
+/**
  * Adds a random about to the page.
  */
 function addRandomAbout() {
@@ -34,6 +53,42 @@ async function showHelloResp() {
 
     const helloContainer = document.getElementById('hello-container');
     helloContainer.innerText = textFromResponse;
+}
+
+/** Fetches the current date from the server and adds it to the page. */
+async function showServerTime() {
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = textFromResponse;
+}
+
+/** Fetches stats from the server and adds them to the page. */
+async function getServerStats() {
+    const responseFromServer = await fetch('/server-stats');
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const stats = await responseFromServer.json();
+
+    const statsListElement = document.getElementById('server-stats-container');
+    statsListElement.innerHTML = '';
+
+    statsListElement.appendChild(
+        createListElement('Start time: ' + stats.startTime));
+    statsListElement.appendChild(
+        createListElement('Current time: ' + stats.currentTime));
+    statsListElement.appendChild(
+        createListElement('Max memory: ' + stats.maxMemory));
+    statsListElement.appendChild(
+        createListElement('Used memory: ' + stats.usedMemory));
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
 }
 
 /**

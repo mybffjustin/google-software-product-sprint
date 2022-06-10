@@ -15,8 +15,8 @@ import java.util.Date;
  *
  * @author jkhoang
  */
-@WebServlet(name = "practiceServlet",
-            urlPatterns = {"/practiceServlet"})
+@WebServlet(name = "practice",
+            urlPatterns = {"/practice"})
 public class PracticeServlet extends HttpServlet {
     private int hitCounter = 0;
 

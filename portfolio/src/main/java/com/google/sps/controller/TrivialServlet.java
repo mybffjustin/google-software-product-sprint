@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "trivialServlet",
-            urlPatterns = {"/trivialServlet"})
+@WebServlet(name = "trivial",
+            urlPatterns = {"/trivial"})
 public class TrivialServlet extends HttpServlet {
 
     /**

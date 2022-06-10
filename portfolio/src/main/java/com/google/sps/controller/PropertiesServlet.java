@@ -16,8 +16,8 @@ import java.util.Properties;
  *
  * @author jkhoang
  */
-@WebServlet(name = "propertiesServlet",
-            urlPatterns = {"/propertiesServlet"})
+@WebServlet(name = "properties",
+            urlPatterns = {"/properties"})
 public class PropertiesServlet extends HttpServlet implements PropLoader {
     /**
      * This declaration, "properties", is a Properties instance variable that

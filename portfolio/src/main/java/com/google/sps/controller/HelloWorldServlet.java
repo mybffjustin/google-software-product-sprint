@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletResponse;
  * Handles requests sent to the /hello URL. Try running a server and navigating
  * to /hello!
  */
-@WebServlet("/hello")
+@WebServlet(name = "hello",
+            urlPatterns = {"/hello"})
 public class HelloWorldServlet extends HttpServlet {
 
     @Override

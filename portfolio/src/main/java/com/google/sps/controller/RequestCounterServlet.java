@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/requestCounterServlet")
+@WebServlet(name = "request-counter",
+            urlPatterns = {"/request-counter"})
 public class RequestCounterServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);

@@ -11,7 +11,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jetty.version>9.4.41.v20210516</jetty.version>
+        <jetty.version>9.4.46.v20220331</jetty.version>
+
         <appengine.version>2.0.5</appengine.version>
         <javax.version>4.0.1</javax.version>
         <jstl.version>1.2</jstl.version>
@@ -26,6 +27,20 @@
     </properties>
 
     <dependencies>
+        <!-- Jetty -->
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-annotations -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-annotations</artifactId>
+            <version>${jetty.version}</version>
+        </dependency>
+
         <!-- Compile/runtime dependencies -->
         <!-- https://mvnrepository.com/artifact/com.google.appengine/appengine-api-1.0-sdk -->
         <dependency>
@@ -40,24 +55,22 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.version}</version>
         </dependency>
+        <!--Javax-WS-RS-API-->
+        <!--Java API for RESTful Web Services-->
+        <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${javax.ws.rs.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!--JSTL-->
         <!-- https://mvnrepository.com/artifact/jstl/jstl -->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
-        </dependency>
-
-        <!-- Jetty -->
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-            <version>${jetty.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-annotations</artifactId>
-            <version>${jetty.version}</version>
         </dependency>
 
         <!--GSON-->
@@ -75,15 +88,6 @@
             <version>${objectify.version}</version>
         </dependency>
 
-        <!--Javax-ws-rs-->
-        <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>${javax.ws.rs.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
         <!--LOG4J2-->
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
@@ -96,13 +100,6 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>${log4j2.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j2.version}</version>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>
