@@ -32,6 +32,21 @@ function randomizeImage() {
 }
 
 /**
+ * Adds a random food to the page.
+ */
+function addRandomFood() {
+    const foods =
+        ['Steak', 'Sandwich', 'Burger', 'Larb', 'Papaya Salad', 'Pad Thai', 'Phở Đặc Biệt', 'Ramen', 'Bánh mì', 'Biryani', 'Chicken 65', 'Jeera Aloo', 'Momos', 'Sushi', 'Pizza', 'Tacos'];
+
+    // Pick a random food.
+    const food = foods[Math.floor(Math.random() * foods.length)];
+
+    // Add it to the page.
+    const foodContainer = document.getElementById('food-container');
+    foodContainer.innerText = food;
+}
+
+/**
  * Adds a random about to the page.
  */
 function addRandomAbout() {
@@ -166,36 +181,38 @@ document.addEventListener("DOMContentLoaded", function () {
 // Side Menu Animation
 // Requires jQuery
 
-$(document).on('click','.js-menu_toggle.closed',function(e){
-    e.preventDefault(); $('.list_load, .list_item').stop();
+$(document).on('click', '.js-menu_toggle.closed', function (e) {
+    e.preventDefault();
+    $('.list_load, .list_item').stop();
     $(this).removeClass('closed').addClass('opened');
 
-    $('.side_menu').css({ 'left':'0px' });
+    $('.side_menu').css({'left': '0px'});
 
     var count = $('.list_item').length;
-    $('.list_load').slideDown( (count*.6)*100 );
-    $('.list_item').each(function(i){
+    $('.list_load').slideDown((count * .6) * 100);
+    $('.list_item').each(function (i) {
         var thisLI = $(this);
-        timeOut = 100*i;
-        setTimeout(function(){
+        timeOut = 100 * i;
+        setTimeout(function () {
             thisLI.css({
-                'opacity':'1',
-                'margin-left':'0'
+                'opacity': '1',
+                'margin-left': '0'
             });
-        },100*i);
+        }, 100 * i);
     });
 });
 
-$(document).on('click','.js-menu_toggle.opened',function(e){
-    e.preventDefault(); $('.list_load, .list_item').stop();
+$(document).on('click', '.js-menu_toggle.opened', function (e) {
+    e.preventDefault();
+    $('.list_load, .list_item').stop();
     $(this).removeClass('opened').addClass('closed');
 
-    $('.side_menu').css({ 'left':'-250px' });
+    $('.side_menu').css({'left': '-250px'});
 
     var count = $('.list_item').length;
     $('.list_item').css({
-        'opacity':'0',
-        'margin-left':'-20px'
+        'opacity': '0',
+        'margin-left': '-20px'
     });
     $('.list_load').slideUp(300);
 });
