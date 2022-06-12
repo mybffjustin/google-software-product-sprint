@@ -1217,12 +1217,20 @@ HEADER SECTION
                     
                     <h2>Fetch Hello Response</h2>
                     <p>Click this button to see the server's response.</p>
-                    <button onclick="showHelloResp();">
+                    <button onclick = "showHelloResp();">
                         Fetch string
                     </button>
-                    <p id="hello-container"></p>
-                    <p>Click <a href="/hello">here</a> to see the server response
+                    <p id = "hello-container"></p>
+                    <p>Click <a href = "/hello">here</a> to see the server
+                       response
                        directly.</p>
+                    <h1>Pokémon</h1>
+                    <p>Click here to add Pokémon to this page:</p>
+                    <button onclick = "getPokemon()">Fetch Pokemon!
+                    </button>
+                    <ul id = "pokemon-container"></ul>
+                    <p>Click <a href = "/pokemon">here</a> to see the
+                       Pokémon server response directly.</p>
                     <h1 class = "arrow"><span>Servlet Fun</span></h1>
                     <a href = "/trivial">Trivial Servlet</a> <br/>
                     <a href = "/simple-html">Simple HTML Servlet</a> <br/>
