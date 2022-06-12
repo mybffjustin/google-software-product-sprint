@@ -1231,6 +1231,32 @@ HEADER SECTION
                     <ul id = "pokemon-container"></ul>
                     <p>Click <a href = "/pokemon">here</a> to see the
                        Pokémon server response directly.</p>
+                    <br/>
+                    <h1>Comment Form</h1>
+                    <form action="/comments" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input name="name" type="text" class="form-control"
+                                   id="name" aria-describedby="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input name="email" type="email"
+                                   class="form-control"
+                                   id="email"
+                                   aria-describedby="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comment
+                            </label>
+                            <input name="comment" type="text"
+                                   class="form-control"
+                                   id="comment" aria-describedby="comment">
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit
+                        </button>
+                    </form>
+
                     <h1 class = "arrow"><span>Servlet Fun</span></h1>
                     <a href = "/trivial">Trivial Servlet</a> <br/>
                     <a href = "/simple-html">Simple HTML Servlet</a> <br/>
