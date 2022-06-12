@@ -17,7 +17,7 @@ public class RequestCounterServlet extends HttpServlet {
         super.init(config);
 
         int count = 0;
-        // save counter to the application scope
+
         getServletContext().setAttribute("counter", count);
     }
 
@@ -26,20 +26,18 @@ public class RequestCounterServlet extends HttpServlet {
                                                                                    ServletException,
                                                                                    IOException {
         ServletContext servletContext = getServletContext();
-        // get the counter
+
         Integer count = (Integer) servletContext.getAttribute("counter");
 
-        // increment the counter
         ++count;
 
-        // save it back the application scope
         servletContext.setAttribute("counter", count);
 
-        // display the message "the counter is incremented"
         PrintWriter out = response.getWriter();
 
         response.setContentType("text/html");
         out.println("<html><head><title>Request Counter</title></head><body>");
+        out.print("<a href='./'>Home</a>");
         out.println(count);
         out.println("<p>The counter is incremented.</p>");
         out.println("</body></html>");

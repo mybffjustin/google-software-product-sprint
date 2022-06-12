@@ -68,7 +68,7 @@ public class PropertiesServlet extends HttpServlet implements PropLoader {
         out.print("<BODY>");
         out.print("<h1>Properties Servlet</h1>" + "<br>");
         out.print("<a href='./'>Home</a>" + "<br>");
-        out.print("<img src='./img/blog1.webp' alt='bear' " + "width='350' >" +
+        out.print("<img src='./resources/img/index/blog1.webp' alt='bear' " + "width='350' >" +
                   "<br>");
         out.print("<table>");
         out.print("<thead>");

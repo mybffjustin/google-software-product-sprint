@@ -35,13 +35,13 @@ public class HttpRequestServlet extends HttpServlet {
         System.out.println("Is this logging? (HttpRequestServlet.java) (bad " +
                            "log version)");
         log("Is this logging? (HttpRequestServlet.java)");
-        out.print("<HTML>");
-        out.print("<HEAD><TITLE>Justin Hoang | HTTP Request</TITLE></HEAD>");
+        out.print("<html>");
+        out.print("<head><title>Justin Hoang | HTTP Request</title></head>");
         out.print("<BODY>");
         out.print("<h1> HTTP Request</h1>" + "<br>");
         out.print("<a href='./'>Home</a>" + "<br>");
-        out.print("<img src='./img/blog1.webp' alt='bear' width='350' >" +
-                  "<br>");
+        out.print("<img src='./resources/img/index/blog1.webp' alt='bear' " +
+                  "width='350' >" + "<br>");
         out.print("<ul>");
         out.print("<li> The current Locale of the request: " +
                   request.getLocale() + "</li>");
@@ -53,8 +53,8 @@ public class HttpRequestServlet extends HttpServlet {
         out.print("<li> The Scheme used to make the request: " +
                   request.getScheme() + "</li>");
         out.print("</ul>");
-        out.print("</BODY>");
-        out.print("</HTML>");
+        out.print("</body>");
+        out.print("</html>");
         out.close();
     }
 }
