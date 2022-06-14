@@ -1217,12 +1217,56 @@ HEADER SECTION
                     
                     <h2>Fetch Hello Response</h2>
                     <p>Click this button to see the server's response.</p>
-                    <button onclick="showHelloResp();">
+                    <button onclick = "showHelloResp();">
                         Fetch string
                     </button>
-                    <p id="hello-container"></p>
-                    <p>Click <a href="/hello">here</a> to see the server response
+                    <p id = "hello-container"></p>
+                    <p>Click <a href = "/hello">here</a> to see the server
+                       response
                        directly.</p>
+                    <h1>Pokémon</h1>
+                    <p>Click here to add Pokémon to this page:</p>
+                    <button onclick = "getPokemon()">Fetch Pokemon!
+                    </button>
+                    <ul id = "pokemon-container"></ul>
+                    <p>Click <a href = "/pokemon">here</a> to see the
+                       Pokémon server response directly.</p>
+                    <br/>
+                    <h1>Comment Form</h1>
+                    <form action="/comments" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input name="name" type="text" class="form-control"
+                                   id="name" aria-describedby="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input name="email" type="email"
+                                   class="form-control"
+                                   id="email"
+                                   aria-describedby="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comment
+                            </label>
+                            <input name="comment" type="text"
+                                   class="form-control"
+                                   id="comment" aria-describedby="comment">
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit
+                        </button>
+                    </form>
+
+                    <h1 class = "arrow"><span>Servlet Fun</span></h1>
+                    <a href = "/trivial">Trivial Servlet</a> <br/>
+                    <a href = "/simple-html">Simple HTML Servlet</a> <br/>
+                    <a href = "/simple-text">Simple Text Servlet</a> <br/>
+                    <a href = "/request-counter">Request Counter Servlet</a>
+                    <br/>
+                    <a href = "/practice">Practice Servlet</a> <br/>
+                    <a href = "/properties">Properties Servlet</a> <br/>
+                    🥳 <br/>
+                    <a href = "/http-request">HTTP Request Servlet</a> <br/>
                 </div>
             </div>
         </div>

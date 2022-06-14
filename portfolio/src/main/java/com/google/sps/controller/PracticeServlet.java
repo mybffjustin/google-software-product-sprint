@@ -61,7 +61,7 @@ public class PracticeServlet extends HttpServlet {
         out.print("<h1> Servlet Practice </h1>" + "<br>");
         out.print("<h1> @mybffjustin :) </h1>" + "<br>");
         out.print("<a href='./'>Home</a>" + "<br>");
-        out.print("<img src='./img/blog1.webp' alt='bear' width='300' >" +
+        out.print("<img src='./resources/img/index/blog1.webp' alt='bear' width='300' >" +
                   "<br>");
 
         out.print("<h2> Servlet Data</h2>");

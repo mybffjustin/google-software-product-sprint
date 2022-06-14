@@ -1,4 +1,4 @@
-package com.google.sps.controller;
+package com.google.sps.controller.sps;
 
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;

@@ -41,7 +41,7 @@ public class TrivialServlet extends HttpServlet {
         out.print("<h1> @mybffjustin TrivialServlet Here! :) </h1>");
         out.print("<a href='./'>Home</a>");
         out.print("<br>");
-        out.print("<img src='./img/blog1.webp' alt='bear' width='350' >");
+        out.print("<img src='./resources/img/index/blog1.webp' alt='bear' width='350' >");
         System.out.println("Is this logging? (TrivialServlet.java) (bad " +
                            "log version)");
         log("Is this logging? (TrivialServlet.java) (better log version)");

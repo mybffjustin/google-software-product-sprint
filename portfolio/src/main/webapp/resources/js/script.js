@@ -106,6 +106,18 @@ function createListElement(text) {
     return liElement;
 }
 
+/** Fetches pokemon from the server and adds them to the page. */
+async function getPokemon() {
+    const responseFromServer = await fetch('/pokemon');
+    const pokeResp = await responseFromServer.json();
+
+    const pokeListElement = document.getElementById('pokemon-container');
+    pokeListElement.innerHTML = '';
+
+    pokeListElement.appendChild(
+        createListElement(pokeResp));
+}
+
 /**
  * Scroll to the top of the document
  */
