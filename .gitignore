@@ -5,3 +5,7 @@
 target/
 *.iml
 log
+.env
+*.env
+ds.json
+service-account-file.json

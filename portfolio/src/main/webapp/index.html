@@ -1208,6 +1208,8 @@ HEADER SECTION
                                                                Processor</a>
                     <br/>
                     🥳 <br/>
+                    <a href = "sps-models/todo-list.html">Todo List</a><br/>
+                    🥳 <br/>
                     <h1 class = "arrow"><span>SPS Exercises</span></h1>
                     
                     <h2><span>What should we eat?</span></h2>
@@ -1256,6 +1258,18 @@ HEADER SECTION
                         <button type="submit" class="btn btn-success">Submit
                         </button>
                     </form>
+                    <h1>Todo List</h1>
+                    <form method="POST" action="/new-task">
+                        <label>
+                            <input type="text" name="title" />
+                        </label>
+                        <br/>
+                        <button type="submit" class="btn btn-success">Submit
+                        </button>
+                    </form>
+                    <hr/>
+                    <ul id="task-list" class="center-block"></ul>
+                    <hr/>
 
                     <h1 class = "arrow"><span>Servlet Fun</span></h1>
                     <a href = "/trivial">Trivial Servlet</a> <br/>

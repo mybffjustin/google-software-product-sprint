@@ -29,7 +29,6 @@ public class PokemonServlet extends HttpServlet {
     }
 
     private String convertToJsonUsingGson(ArrayList<String> arrayList) {
-        Gson gson = new Gson();
-        return gson.toJson(arrayList);
+        return new Gson().toJson(arrayList);
     }
 }
